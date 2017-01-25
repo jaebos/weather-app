@@ -19,10 +19,11 @@ $(document).ready(function(){
   $.getJSON(api, function(data){
     //JSON call for Open Weather API
 
-    var weatherType=data.weather[0].description;
+    var weatherType=data.weather[0].main;
         kTemp = data.main.temp;
         var windSpeed = data.wind.speed;
     var city = data.name;
+    var tempSwap = false;
 
     fTemp = (kTemp)*(9/5)-459.67;
     //Temp in F
@@ -31,9 +32,25 @@ $(document).ready(function(){
     //Temp in C
 
     $("#city").html(city);
+      $("#weatherType").html(weatherType);
+      $("#fTemp").html(fTemp);
+      $("#fTemp").click(function(){
+
+        if(tempSwap===false){
+          $("#fTemp").html(cTemp);
+          tempSwap=true;
+        }
+        else{
+          $("#fTemp").html(fTemp);
+          tempSwap=false;
+        }
+
+      });
 
   });
+
 });
+
 }
 
 });
