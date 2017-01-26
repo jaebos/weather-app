@@ -25,23 +25,23 @@ $(document).ready(function(){
     var city = data.name;
     var tempSwap = false;
 
-    fTemp = (kTemp)*(9/5)-459.67;
+    fTemp = Math.round(kTemp*(9/5)-459.67);
     //Temp in F
 
-    cTemp = kTemp-273;
+    cTemp = Math.round(kTemp-273);
     //Temp in C
 
     $("#city").html(city);
       $("#weatherType").html(weatherType);
-      $("#fTemp").html(fTemp);
+      $("#fTemp").html(fTemp + " &#8457; ");
       $("#fTemp").click(function(){
 
         if(tempSwap===false){
-          $("#fTemp").html(cTemp);
+          $("#fTemp").html(cTemp + " &#8451 ");
           tempSwap=true;
         }
         else{
-          $("#fTemp").html(fTemp);
+          $("#fTemp").html(fTemp + " &#8457; ");
           tempSwap=false;
         }
 
