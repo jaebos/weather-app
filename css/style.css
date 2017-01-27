@@ -1,1 +1,23 @@
+body {
+  font-family: 'Marmelad';
+  color: #fff;
+  background-color: #161616;
+}
 
+header {
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+p {
+  font-size: 1.8em;
+  text-transform: capitalize;
+}
+
+.btn {
+  font-size: 2em;
+  margin-bottom: 10px;
+}

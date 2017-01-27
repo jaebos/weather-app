@@ -23,6 +23,7 @@ $(document).ready(function(){
         kTemp = data.main.temp;
         var windSpeed = data.wind.speed;
     var city = data.name;
+    var country = data.sys.country;
     var tempSwap = false;
 
     fTemp = Math.round(kTemp*(9/5)-459.67);
@@ -32,6 +33,7 @@ $(document).ready(function(){
     //Temp in C
 
     $("#city").html(city);
+    $("#country").html(country);
       $("#weatherType").html(weatherType);
       $("#fTemp").html(fTemp + " &#8457; ");
       $("#fTemp").click(function(){

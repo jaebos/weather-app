@@ -6,8 +6,9 @@
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link  rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Tangerine|Raleway">
+  <!-- <link  rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" type="text/css"  href="https://fonts.googleapis.com/css?family=Marmelad">
+  <link rel="stylesheet" type="text/css"  href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
 <!-- jQuery library -->
@@ -17,13 +18,22 @@
 </head>
   <body>
 
-    <div class="text-center">
-      <h1>FreeCodeCamp Weather App</h1>
-          <ul class = "list-unstyled">
-            <li id="city"></li>
-            <li class = btn btn-default" id="fTemp"></li>
-            <li id="weatherType"></li>
-          </ul>
+    <div class="container">
+      <div class="row">
+        <header class="col-xs-12 text-center">
+      <h1>Show L<i class="wi wi-hail"></i>cal</h1>
+      <h1>Weather App</h1>
+    </header>
+
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="text-center status">
+        <p><span id="city"></span>, <span id="country"></span></p>
+            <p class= "btn btn-default" id="fTemp"></p>
+            <p id="weatherType"></p>
       </div>
+    </div>
+  </div>
+</div>
+
   </body>
   </html>
